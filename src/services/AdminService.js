@@ -106,7 +106,7 @@ const disablePrinter = (token, printerID) => {
 
 //get rating by printing id
 const getRatingByPrintingId = (token, printingId, page, size) => {
-  return axios.put(`/ssps/admin/get-all-ratings/${printingId}?page=${page}&size=${size}`,{}, {
+  return axios.get(`/ssps/admin/get-all-ratings/${printingId}?page=${page}&size=${size}`,{
     headers: {
       Authorization: `Bearer ${token}`, // Thêm token vào headers
     },
@@ -115,7 +115,7 @@ const getRatingByPrintingId = (token, printingId, page, size) => {
 
 //get all rating
 const getAllRating = (token, page, size) => {
-  return axios.put(`/ssps/admin/get-all-ratings?page=${page}&size=${size}`,{}, {
+  return axios.get(`/ssps/admin/get-all-ratings?page=${page}&size=${size}`, {
     headers: {
       Authorization: `Bearer ${token}`, // Thêm token vào headers
     },
@@ -124,12 +124,13 @@ const getAllRating = (token, page, size) => {
 
 //get rating by student id
 const getRatingByStudentId = (token, studentId, page, size) => {
-  return axios.put(`/ssps/admin/get-ratings-by-student-id/${studentId}?page=${page}&size=${size}`,{}, {
+  return axios.get(`/ssps/admin/get-ratings-by-student-id/${studentId}?page=${page}&size=${size}`,{
     headers: {
       Authorization: `Bearer ${token}`, // Thêm token vào headers
     },
   });
 };
+
 
 export {
   apiAdminRegister, fetchAdminInfo, fetchAllUsers,

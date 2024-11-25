@@ -30,7 +30,7 @@ import StudentReport from "./pages/Sidebar/StudentReport";
 import StudentRegister from "./pages/Register/StudentRegister";
 import AdminRegister from "./pages/Register/AdminRegister";
 // import PrivateRoute from './router/PrivateRoutes'
-
+import UserReviews from "./pages/Sidebar/UserReviews";
 function App() {
   return (
     <>
@@ -68,6 +68,7 @@ function App() {
             // </PrivateRoute>
           }
         />
+
         <Route
           path="/Payment"
           element={
@@ -148,6 +149,18 @@ function App() {
             // <Layout>
             <DashboardLayout>
               <UserList />
+            </DashboardLayout>
+            // </Layout>
+            // </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/UserReviews"
+          element={
+            // <PrivateRoute>
+            // <Layout>
+            <DashboardLayout>
+              <UserReviews />
             </DashboardLayout>
             // </Layout>
             // </PrivateRoute>
